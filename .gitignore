@@ -1,3 +1,5 @@
 # Ignore image_files Directory
 image_files/
 
+#Ignore the SSH Key for the AWS EC2 Instance
+bknj-gns3-vm.pem
