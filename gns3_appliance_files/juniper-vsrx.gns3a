@@ -19,6 +19,7 @@
         "adapter_type": "vmxnet3",
         "adapters": 6,
         "ram": 4096,
+        "cpus": 4,
         "hda_disk_interface": "ide",
         "arch": "x86_64",
         "console_type": "telnet",
@@ -45,6 +46,13 @@
             "version": "20.4R1 3.0",
             "md5sum": "0e7a44a56c0326908fcbdc70451e08f5",
             "filesize": 942211072,
+            "download_url": "https://www.juniper.net/us/en/dm/free-vsrx-trial/"
+        },
+        {
+            "filename": "junos-vsrx3-x86-64-20.1R1.11.qcow2",
+            "version": "20.1R1 3.0",
+            "md5sum": "bc2a951977b79fcc5d155b2fa0036092",
+            "filesize": 885850112,
             "download_url": "https://www.juniper.net/us/en/dm/free-vsrx-trial/"
         },
         {
@@ -205,6 +213,12 @@
             "name": "20.4R1 3.0",
             "images": {
                 "hda_disk_image": "junos-vsrx3-x86-64-20.4R1.12.qcow2"
+            }
+        },
+        {
+            "name": "20.1R1 3.0",
+            "images": {
+                "hda_disk_image": "junos-vsrx3-x86-64-20.1R1.11.qcow2"
             }
         },
         {
