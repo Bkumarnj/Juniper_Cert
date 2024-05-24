@@ -19,9 +19,10 @@
         "adapter_type": "vmxnet3",
         "adapters": 6,
         "ram": 4096,
-        "cpus": 4,
+        "cpus": 3,
         "hda_disk_interface": "ide",
         "arch": "x86_64",
+        "cpus": 3,
         "console_type": "telnet",
         "kvm": "require",
         "options": "-smp 2"
