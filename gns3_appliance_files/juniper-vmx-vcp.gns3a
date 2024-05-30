@@ -20,6 +20,7 @@
         "adapter_type": "e1000",
         "adapters": 2,
         "ram": 1024,
+        "cpus": 1,
         "hda_disk_interface": "ide",
         "hdb_disk_interface": "ide",
         "hdc_disk_interface": "ide",
@@ -70,6 +71,24 @@
             "version": "19.3R1.8-KVM",
             "md5sum": "3c66c4657773a0cd2b38ffd84115446a",
             "filesize": 10485760
+        },
+        {
+            "filename": "junos-vmx-x86-64-18.2R1.9.qcow2",
+            "version": "18.2R1.9-KVM",
+            "md5sum": "491d74204f4971dc6c8f525b6151fc2e",
+            "filesize": 1334771712
+        },
+        {
+            "filename": "vmxhdd-18.2R1.9.img",
+            "version": "18.2R1.9-KVM",
+            "md5sum": "afddeef9483d72c740fb11f0d051e442",
+            "filesize": 108986368
+        },
+        {
+            "filename": "metadata-usb-re-18.2R1.9.img",
+            "version": "18.2R1.9-KVM",
+            "md5sum": "245a2ba8d056eb243812eabce1bce4d1",
+            "filesize": 16777216
         },
         {
             "filename": "junos-vmx-x86-64-17.4R1.16.qcow2",
@@ -388,6 +407,14 @@
                 "hdc_disk_image": "metadata-usb-re-19.3R1.8.img"
             }
         },
+        {
+            "name": "18.2R1.9-KVM",
+            "images": {
+                "hda_disk_image": "junos-vmx-x86-64-18.2R1.9.qcow2",
+                "hdb_disk_image": "vmxhdd-18.2R1.9.img",
+                "hdc_disk_image": "metadata-usb-re-18.2R1.9.img"
+            }
+        }, 
         {
             "name": "17.4R1.16-KVM",
             "images": {

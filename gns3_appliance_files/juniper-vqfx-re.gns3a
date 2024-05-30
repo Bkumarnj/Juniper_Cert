@@ -72,7 +72,7 @@
                 "adapter_number": 12,
                 "port_name": "xe-0/0/9"
             }            
-        ]
+        ],
         "ram": 2048,
         "hda_disk_interface": "ide",
         "arch": "x86_64",

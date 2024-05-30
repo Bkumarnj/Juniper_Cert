@@ -19,7 +19,7 @@
     "qemu": {
         "adapter_type": "virtio-net-pci",
         "adapters": 11,
-        "ram": 5120,
+        "ram": 4096,
         "cpus": 4,
         "hda_disk_interface": "virtio",
         "arch": "x86_64",

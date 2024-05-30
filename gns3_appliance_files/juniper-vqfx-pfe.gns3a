@@ -19,6 +19,7 @@
         "adapter_type": "e1000",
         "adapters": 2,
         "ram": 2048,
+        "cpus": 1,
         "hda_disk_interface": "ide",
         "arch": "x86_64",
         "console_type": "vnc",

@@ -15,16 +15,71 @@
     "usage": "Connect VCP by port Eth1.\nData port ge/xe-x/0/0 to ge/xe-x/0/9 mapping to Eth3 to Eth12.\nInitial username is root, password is root.\n",
     "symbol": "juniper-vmx.svg",
     "first_port_name": "fxp0",
-    "port_name_format": "Eth{port1}",
+    "port_name_format": "em{port1}",
     "qemu": {
         "adapter_type": "virtio-net-pci",
         "adapters": 12,
         "ram": 4096,
+        "cpus":2,
+        "custom_adapters": [
+            {
+                "adapter_number": 0,
+                "port_name": "fxp0"
+            },
+            {
+                "adapter_number": 1,
+                "port_name": "em1"
+            },
+            {
+                "adapter_number": 2,
+                "port_name": "em2"
+            },
+            {
+                "adapter_number": 3,
+                "port_name": "ge-0/0/0"
+            },
+            {
+                "adapter_number": 4,
+                "port_name": "ge-0/0/1"
+            },
+            {
+                "adapter_number": 5,
+                "port_name": "ge-0/0/2"
+            },
+            {
+                "adapter_number": 6,
+                "port_name": "ge-0/0/3"
+            },
+            {
+                "adapter_number": 7,
+                "port_name": "ge-0/0/4"
+            },
+            {
+                "adapter_number": 8,
+                "port_name": "ge-0/0/5"
+            },
+            {
+                "adapter_number": 9,
+                "port_name": "ge-0/0/6"
+            },
+            {
+                "adapter_number": 10,
+                "port_name": "ge-0/0/7"
+            },
+            {
+                "adapter_number": 11,
+                "port_name": "ge-0/0/8"
+            },
+            {
+                "adapter_number": 12,
+                "port_name": "ge-0/0/9"
+            }            
+        ],
         "hda_disk_interface": "ide",
         "arch": "x86_64",
         "console_type": "telnet",
         "kvm": "require",
-        "options": "-nographic -enable-kvm -smp cpus=3"
+        "options": "-nographic -enable-kvm -smp cpus=2"
     },
     "images": [
         {
@@ -46,6 +101,13 @@
             "version": "19.3R1.8-KVM",
             "md5sum": "b77ca27a45a07c56b8f72905fafbe822",
             "filesize": 2447376384,
+            "download_url": "http://www.juniper.net/us/en/products-services/routing/mx-series/vmx/"
+        },
+        {
+            "filename": "vFPC-20180605.img",
+            "version": "18.2R1.9-KVM",
+            "md5sum": "9b03ee3355174d100fb72054755f98de",
+            "filesize": 2313158656,
             "download_url": "http://www.juniper.net/us/en/products-services/routing/mx-series/vmx/"
         },
         {
@@ -178,6 +240,12 @@
             "name": "19.3R1.8-KVM",
             "images": {
                 "hda_disk_image": "vFPC-20190819.img"
+            }
+        },
+        {
+            "name": "18.2R1.9-KVM",
+            "images": {
+                "hda_disk_image": "vFPC-20180605.img"
             }
         },
         {
