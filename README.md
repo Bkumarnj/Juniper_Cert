@@ -2,6 +2,8 @@
 
 has only 2 branches main and staging
 
+testing on staging is ongoing
+
 #Debian preconfig
 
 useradd NetAdmin -s /bin/bash
