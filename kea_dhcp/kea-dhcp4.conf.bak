@@ -1,0 +1,50 @@
+{
+"Dhcp4": {
+    "interfaces-config": {
+        "interfaces": ["ens4"]
+    },
+
+    "authoritative": true,
+
+    "lease-database": {
+        "type": "memfile",
+        "persist": true,
+        "name": "/var/lib/kea/kea-leases4.csv",
+        "lfc-interval": 3600
+    },
+
+    "renew-timer": 15840,
+    "rebind-timer": 27720,
+    "valid-lifetime": 31680,
+
+    "option-data": [
+        {
+            "name": "domain-name-servers",
+            "data": "10.16.17.101, 10.16.17.102"
+        },
+
+        {
+            "name": "domain-search",
+            "data": "bknj.lan"
+        }
+    ],
+
+    "subnet4": [
+        {
+            "id":1,
+            "subnet": "10.16.21.0/24",
+            "pools": [ { "pool": "10.16.21.100 - 10.16.21.199" } ],
+            "option-data": [
+                {
+                    "name": "routers",
+                    "data": "10.16.21.1"
+                }
+            ]
+            
+            // Add reservations here
+        }
+        
+        // Add subnets here
+    ]
+}
+}
