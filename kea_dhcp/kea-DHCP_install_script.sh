@@ -59,7 +59,7 @@ cat <<EOL | sudo tee /etc/kea/kea-dhcp4.conf
         {
             "id":1,
             "subnet": "10.16.21.0/24",
-            "pools": [ { "pool": "10.16.21.100 - 10.16.21.199" } ],
+            "pools": [ { "pool": "10.16.21.10 - 10.16.21.250" } ],
             "option-data": [
                 {
                     "name": "routers",
@@ -68,8 +68,20 @@ cat <<EOL | sudo tee /etc/kea/kea-dhcp4.conf
             ]
             
             // Add reservations here
+        },
+        {
+            "id":2,
+            "subnet": "10.16.22.0/24",
+            "pools": [ { "pool": "10.16.22.10 - 10.16.21.250" } ],
+            "option-data": [
+                {
+                    "name": "routers",
+                    "data": "10.16.22.1"
+                }
+            ]
+            
+            // Add reservations here
         }
-        
         // Add subnets here
     ]
 }
@@ -77,11 +89,13 @@ cat <<EOL | sudo tee /etc/kea/kea-dhcp4.conf
 EOL
 
 # Backup and set the static IP configuration for ens4
-backup_file /etc/netplan/01-netcfg.yaml
-sudo tee /etc/netplan/01-netcfg.yaml <<EOL
+backup_file /etc/netplan/90-default.yaml
+sudo tee /etc/netplan/90-default.yaml <<EOL
 network:
   version: 2
   ethernets:
+    ens3: 
+      dhcp4: true
     ens4:
       dhcp4: no
       addresses: [10.172.16.100/24]
@@ -93,9 +107,17 @@ EOL
 # Apply the netplan configuration
 sudo netplan apply
 
+# Remove specific lines from /etc/network/interfaces
+sudo sed -i '/^auto ens3/,/^iface ens3 inet dhcp/d' /etc/network/interfaces
+sudo sed -i '/^auto ens4/,/^iface ens4 inet static/d' /etc/network/interfaces
+
 # Enable and start the Kea DHCP service
 sudo systemctl enable isc-kea-dhcp4-server
 sudo systemctl start isc-kea-dhcp4-server
 
 # Check the status of the Kea DHCP service
 sudo systemctl status isc-kea-dhcp4-server
+
+# Changing hostname to DHCP-Server and a reboot o make it permanent
+hostnamectl set-hostname bknj-kea-dhcp-srv01
+reboot
