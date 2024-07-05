@@ -1,5 +1,12 @@
 # Juniper_Cert for doing Juniper certifications
 
-has only 2 branches main and staging
+has 2 branches main and staging
 
-testing on staging is done
+The Lab topologies are structured to cater to particular certification exam rather pushes you to go beyond.  This Lab practice is geared towards making you proficient in the Juniper world of devices as much as possible.
+
+If you wish to recreate this setup please feel free fork the repo.
+
+Juniper Lab environment setup using GNS3
+
+![alt text](<gns3_lab_setup/Juniper Lab Environment setup.drawio.png>)
+
