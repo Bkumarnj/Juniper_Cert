@@ -1,13 +1,11 @@
 network:
   version: 2
   ethernets:
-    ens3:
+    ens3: 
       dhcp4: true
     ens4:
-      addresses:
-        - 10.172.16.100/24
+      dhcp4: no
+      addresses: [10.172.16.100/24]
       gateway4: 10.172.16.1
       nameservers:
-        addresses:
-          - 8.8.8.8
-          - 8.8.9.9
+        addresses: [8.8.8.8, 8.8.9.9]
