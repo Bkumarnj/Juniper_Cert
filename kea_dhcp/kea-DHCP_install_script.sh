@@ -9,8 +9,9 @@ backup_file() {
   fi
 }
 
-# Update the package list
+# Update and Upgrade the package list
 sudo apt-get update
+sudo apt-get upgrade -y
 
 #Install the Dependencies for Kea DHCP server
 apt install curl apt-transport-https -y
