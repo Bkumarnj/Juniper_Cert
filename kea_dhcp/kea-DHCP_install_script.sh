@@ -10,8 +10,7 @@ backup_file() {
 }
 
 # Update and Upgrade the package list
-sudo apt-get update
-sudo apt-get upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 
 #Install the Dependencies for Kea DHCP server
 apt install curl apt-transport-https -y
@@ -108,7 +107,7 @@ EOL
 # Apply the netplan configuration
 sudo netplan apply
 
-# Remove specific lines from /etc/network/interfaces
+# Remove Interface config from /etc/network/interfaces
 sudo sed -i '/^auto ens3/,/^iface ens3 inet dhcp/d' /etc/network/interfaces
 sudo sed -i '/^auto ens4/,/^iface ens4 inet static/d' /etc/network/interfaces
 
@@ -120,5 +119,5 @@ sudo systemctl start isc-kea-dhcp4-server
 sudo systemctl status isc-kea-dhcp4-server
 
 # Changing hostname to DHCP-Server and a reboot o make it permanent
-hostnamectl set-hostname bknj-kea-dhcp-srv01
+sudo hostnamectl set-hostname dhcp-srv01
 reboot
