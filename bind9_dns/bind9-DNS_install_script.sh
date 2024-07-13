@@ -150,6 +150,7 @@ backup_file /etc/netplan/90-default.yaml
 sudo tee /etc/netplan/90-default.yaml <<EOL
 network:
   version: 2
+  renderer: networkd
   ethernets:
     ens3: 
       dhcp4: true
