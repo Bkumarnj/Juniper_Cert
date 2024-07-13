@@ -1,5 +1,7 @@
 # Ignore image_files Directory
 image_files/
+
+#Ignore Lab SSH keys
 lab_keys/
 
 #Ignore the SSH Key for the AWS EC2 Instance
