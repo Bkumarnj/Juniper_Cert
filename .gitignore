@@ -2,7 +2,7 @@
 image_files/
 
 #Ignore Lab SSH keys
-/lab_keys/
+lab_keys/
 
 #Ignore the SSH Key for the AWS EC2 Instance
 bknj-gns3-vm.pem
