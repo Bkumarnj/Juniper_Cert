@@ -2,7 +2,11 @@
 image_files/
 
 #Ignore Lab SSH keys
+<<<<<<< HEAD
 
+=======
+/lab_keys/
+>>>>>>> parent of a80e852 (removing keys from tracking)
 
 #Ignore the SSH Key for the AWS EC2 Instance
 bknj-gns3-vm.pem
