@@ -4,7 +4,7 @@ qm create 102 --name=BKNJ-LabGFW-vSRX01 --memory=4092 --sockets=1 --cores=2 --ba
 
 qm set 102 -args '-machine smbios-entry-point-type=32'
 
-qm importdisk 102 vSRX-23.2R2.21.qcow2 local-lvm
+qm importdisk 102 /junos/vSRX-23.2R2.21.qcow2 local-lvm
 
 qm set 102 --scsi0 local-lvm:vm-102-disk-0
 
