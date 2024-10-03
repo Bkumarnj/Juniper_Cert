@@ -8,5 +8,5 @@ If you wish to recreate this setup please feel free fork the repo.
 
 Juniper Lab environment setup using GNS3
 
-![alt text](<gns3_lab_setup/Misc_Resources/Juniper_Lab_Topology.png>)
+![Lab Architecture](gns3_lab_setup/Misc_Resources/Juniper_Lab_Topology.png)
 
