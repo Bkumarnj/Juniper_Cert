@@ -168,3 +168,5 @@ sudo netplan apply
 # Remove Interface config from /etc/network/interfaces
 sudo sed -i '/^auto ens3/,/^iface ens3 inet dhcp/d' /etc/network/interfaces
 sudo sed -i '/^auto ens4/,/^iface ens4 inet static/d' /etc/network/interfaces
+
+sudo hostnamectl set-hostname dns-srv01
