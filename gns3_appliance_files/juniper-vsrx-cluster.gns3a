@@ -1,6 +1,6 @@
 {
     "appliance_id": "23b231f5-efb9-4e19-9e4d-f1672d442d78",
-    "name": "vSRX",
+    "name": "vSRX-cl",
     "category": "firewall",
     "description": "The vSRX delivers core firewall, networking, advanced security, and automated lifecycle management capabilities for enterprises and service providers. The industry's fastest virtual security platform, the vSRX offers firewall speeds up to 17 Gbps using only two virtual CPUs, providing scalable, secure protection across private, public, and hybrid clouds.\n\nJuniper version 12 can support only 1GB of ram.",
     "vendor_name": "Juniper",
@@ -12,16 +12,59 @@
     "status": "experimental",
     "maintainer": "GNS3 Team",
     "maintainer_email": "developers@gns3.net",
-    "usage": "Initial username is root, no password.",
+    "usage": "Initial username is root, no password. Adapter 0 is fxp0 and Adapter 1 is the control (CTL) link for cluster",
+    "symbol": "vsrx_bybaro.svg",
     "first_port_name": "fxp0",
     "port_name_format": "ge-0/0/{0}",
     "qemu": {
         "adapter_type": "virtio-net-pci",
-        "adapters": 6,
+        "adapters": 10,
+        "custom_adapters": [
+            {
+                "adapter_number": 0,
+                "port_name": "fxp0"
+            },
+            {
+                "adapter_number": 1,
+                "port_name": "CTL"
+            },
+            {
+                "adapter_number": 2,
+                "port_name": "ge-0/0/0"
+            },
+            {
+                "adapter_number": 3,
+                "port_name": "ge-0/0/1"
+            },
+            {
+                "adapter_number": 4,
+                "port_name": "ge-0/0/2"
+            },
+            {
+                "adapter_number": 5,
+                "port_name": "ge-0/0/3"
+            },
+            {
+                "adapter_number": 6,
+                "port_name": "ge-0/0/4"
+            },
+            {
+                "adapter_number": 7,
+                "port_name": "ge-0/0/5"
+            },
+            {
+                "adapter_number": 8,
+                "port_name": "ge-0/0/6"
+            },
+            {
+                "adapter_number": 9,
+                "port_name": "ge-0/0/7"
+            }
+        ],    
         "ram": 4096,
         "hda_disk_interface": "ide",
         "arch": "x86_64",
-        "cpus": 2,
+        "cpus": 3,
         "console_type": "telnet",
         "kvm": "require",
         "options": "-smp 2"
