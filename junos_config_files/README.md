@@ -27,8 +27,15 @@ These Lab User accounts have the User ID, Password, Public and Private Keys are 
 | `vSRX-DC-Cluster-config_file.conf`       | Configuration of DC Firewall cluster.                 |
 | `vQFX01-config_file.conf`       | Configuration of DC Primary Spine L3 switch.                 |
 | `vQFX02-config_file.conf`       | Configuration of DC Secondary Spine L3 switch              |
+| `vQFX01-Leaf_config_file.conf`       | Configuration of DC Leaf switch1.                 |
+| `vQFX02-Leaf_config_file.conf`       | Configuration of DC Leaf switch2              |
 | `vSRX01-config_file.conf`       | Configuration of Site A Gateway Firewall.                 |
 | `vSRX02-config_file.conf`       | Configuration of Site B Gateway Firewall.                 |
 | `vEX01-A-config_file.conf`       | Configuration of Site A Primary L3 Switch.                 | 
 | `vEX02-A-config_file.conf`       | Configuration of Site A Secondary L3 Switch.                 | 
 | `vEX01-B-config_file.conf`       | Configuration of Site B Primary L3 Switch.                 | 
+
+
+## GNS3 Project Architecture
+
+![Lab Architecture](/junos_config_files/GNS3-JNCIA_LAB-DC.png)
