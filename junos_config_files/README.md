@@ -11,11 +11,6 @@ How to run or use the Files after setup.
 - **Step 2:** Configure a Jummphost and connection via fxp0 to load the configuration on to the appliance. (this step is optional, if you wish to just paste the config via console terminal).
 - **Step 3:** Ensure your user configuration is done correctly.
 
-## Passwords for Lab accounts
-NedAdmin Password: BKNJadmin@123
-AuditOps1 Password: BKNJaudit@123
-NOC-Ops1 Password: BKNJnoc1@123
-
 ## Disclaimer
 These Lab User accounts have the User ID, Password, Public and Private Keys are open to people who can view this repository, so refrain from using these credentials on non lab devices. If used, your security is compromised and only you (the individual who incorporated this) will be held responsible for the Blunderous act.
 
@@ -38,4 +33,6 @@ These Lab User accounts have the User ID, Password, Public and Private Keys are 
 
 ## GNS3 Project Architecture
 
+DC Setup:
 ![Lab Architecture](/junos_config_files/GNS3-JNCIA_LAB-DC.png)
+
